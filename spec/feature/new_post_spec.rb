@@ -14,7 +14,8 @@ feature 'post creation' do
     visit '/posts/new'
     fill_in('Title', with: 'Hello')
     fill_in('Content', with: 'I am saying hi!')
-    click_button('Submit')
+    click_button('Create Post')
+
     expect(current_path).to eq '/'
     expect(page).to have_content 'Hello'
   end

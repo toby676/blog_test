@@ -1,1 +1,9 @@
 Welcome
+<li>
+  <% Post.all.each do |post| %>
+    <ul>
+      <%= post.title %>
+      <%= post.content %>
+    </ul>
+  <% end %>
+</li>
